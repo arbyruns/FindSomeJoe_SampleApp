@@ -25,6 +25,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
+            GeometryReader { geo in
             Color("Background")
                 .edgesIgnoringSafeArea(.all)
             VStack {
@@ -43,7 +44,7 @@ struct ContentView: View {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 10) {
                         ForEach(CoffeeShopItems){ shop in
-                            ShopView(shop: shop)
+                            GridView(shop: shop)
                                 .padding(.top)
                                 .shadow(color: .black.opacity(colorScheme == .dark ? 1.0 : 0.3), radius: 4)
                                 .onTapGesture {
@@ -60,9 +61,13 @@ struct ContentView: View {
                     }
                 }
             }
+            .frame(width: geo.size.width, height: geo.size.height)
+            .disabled(self.showSideBar ? true : false)
+            .offset(x: self.showSideBar ? geo.size.width/2 : 0)
             if showSideBar {
                 HStack {
                     SideBarView()
+                        .frame(width: geo.size.width / 2)
                         .opacity(2 - Double(abs(sidebarOffSet.width / 75)))
                         .offset(x: self.sidebarOffSet.width)
                         .gesture(
@@ -85,11 +90,7 @@ struct ContentView: View {
                         )
                     Spacer()
                 }
-                .onTapGesture {
-                    withAnimation {
-                    showSideBar = false
-                    }
-                }
+            }
             }
         }
         .transition(.opacity)
@@ -102,63 +103,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(shopData: ShopData())
         ContentView(shopData: ShopData())
             .colorScheme(.dark)
-    }
-}
-
-struct ShopView: View {
-
-    var shop: CoffeeShops
-    var body: some View {
-        VStack {
-            ZStack(alignment: .top) {
-                Color("Color1")
-                    .frame(width: 185, height: 225)
-                    .clipShape(RoundedRectangle(cornerRadius: 23))
-                VStack {
-                    Image(shop.shopImage)
-                        .resizable()
-                        .frame(width: 175, height: 165)
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(RoundedRectangle(cornerRadius: 23))
-                        .padding(.horizontal, 8)
-                        .padding(.top, 8)
-                        .overlay(
-                            VStack{
-                                Spacer()
-                                ZStack{
-                                    Capsule()
-                                        .fill(Color("Color5"))
-                                        .frame(width: 90, height: 25)
-                                        .padding(.leading)
-                                    HStack {
-                                        Spacer()
-                                        Image(systemName: "star.fill")
-                                            .foregroundColor(Color.yellow)
-                                            .font(.footnote)
-                                        Text("\(String(format: "%.1f", shop.shopRating))")
-                                            .font(.footnote)
-                                        Spacer()
-                                    }
-                                    .padding()
-                                }
-
-                            }
-                        )
-                    HStack {
-                        Text(shop.shopName)
-                            .fontWeight(.semibold)
-                        Spacer()
-                    }
-                    .padding(.leading)
-                    HStack {
-                        Text(shop.shopOpen ? "Open" : "Closed")
-                            .foregroundColor(.secondary)
-                            .font(.footnote)
-                        Spacer()
-                    }
-                    .padding(.leading)
-                }
-            }
-        }
     }
 }

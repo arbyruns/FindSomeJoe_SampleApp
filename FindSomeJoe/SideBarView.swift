@@ -22,7 +22,6 @@ struct SideBarView: View {
             }
             .padding(.top, 45)
         }
-        .frame(width: 225)
         .edgesIgnoringSafeArea(.all)
     }
 }

@@ -20,7 +20,7 @@ struct HeaderView: View {
                 Image(systemName: "line.3.horizontal.decrease")
                     .font(.title)
                     .padding(.bottom)
-                    .foregroundColor(Color("Coffee"))
+                    .foregroundColor(Color("Color5"))
             }
             HStack {
                 Text("Find Some")
@@ -32,7 +32,7 @@ struct HeaderView: View {
             HStack{
                 Text("joe")
                     .bold()
-                    .foregroundColor(Color("Coffee"))
+                    .foregroundColor(Color("Color5"))
                     .textCase(.uppercase)
                     .font(.largeTitle)
                 Spacer()
