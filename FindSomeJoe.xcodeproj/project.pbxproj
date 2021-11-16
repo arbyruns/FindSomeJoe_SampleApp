@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540B80BE27443CD800414BE6 /* Completed_CoffeeShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540B80BD27443CD800414BE6 /* Completed_CoffeeShopView.swift */; };
+		540B80C027443DBD00414BE6 /* ShopAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540B80BF27443DBD00414BE6 /* ShopAddressView.swift */; };
+		540B80C227443DF600414BE6 /* Completed_ShopAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540B80C127443DF600414BE6 /* Completed_ShopAddressView.swift */; };
 		5413D4DA273766800015EA0C /* CoffeeShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413D4D9273766800015EA0C /* CoffeeShopView.swift */; };
 		543275642739934700B6C1A3 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543275632739934700B6C1A3 /* SideBarView.swift */; };
 		543275662739ADC200B6C1A3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543275652739ADC200B6C1A3 /* HeaderView.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		540B80BD27443CD800414BE6 /* Completed_CoffeeShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Completed_CoffeeShopView.swift; sourceTree = "<group>"; };
+		540B80BF27443DBD00414BE6 /* ShopAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopAddressView.swift; sourceTree = "<group>"; };
+		540B80C127443DF600414BE6 /* Completed_ShopAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Completed_ShopAddressView.swift; sourceTree = "<group>"; };
 		5413D4D9273766800015EA0C /* CoffeeShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopView.swift; sourceTree = "<group>"; };
 		543275632739934700B6C1A3 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		543275652739ADC200B6C1A3 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -42,6 +48,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		540B80BC27443C6400414BE6 /* Completed */ = {
+			isa = PBXGroup;
+			children = (
+				543275632739934700B6C1A3 /* SideBarView.swift */,
+				5480B74F2736FECB000CA635 /* Data.swift */,
+				543275652739ADC200B6C1A3 /* HeaderView.swift */,
+				5480B7432736FC8B000CA635 /* ContentView.swift */,
+				54602061273B08C6009ED64F /* GridView.swift */,
+				540B80BD27443CD800414BE6 /* Completed_CoffeeShopView.swift */,
+				540B80C127443DF600414BE6 /* Completed_ShopAddressView.swift */,
+				5480B7412736FC8B000CA635 /* FindSomeJoeApp.swift */,
+			);
+			path = Completed;
+			sourceTree = "<group>";
+		};
 		5480B7352736FC8B000CA635 = {
 			isa = PBXGroup;
 			children = (
@@ -61,13 +82,9 @@
 		5480B7402736FC8B000CA635 /* FindSomeJoe */ = {
 			isa = PBXGroup;
 			children = (
-				543275632739934700B6C1A3 /* SideBarView.swift */,
-				5480B7412736FC8B000CA635 /* FindSomeJoeApp.swift */,
-				5480B74F2736FECB000CA635 /* Data.swift */,
-				543275652739ADC200B6C1A3 /* HeaderView.swift */,
-				5480B7432736FC8B000CA635 /* ContentView.swift */,
-				54602061273B08C6009ED64F /* GridView.swift */,
+				540B80BC27443C6400414BE6 /* Completed */,
 				5413D4D9273766800015EA0C /* CoffeeShopView.swift */,
+				540B80BF27443DBD00414BE6 /* ShopAddressView.swift */,
 				5480B7452736FC8C000CA635 /* Assets.xcassets */,
 				5480B7472736FC8C000CA635 /* Preview Content */,
 			);
@@ -154,11 +171,14 @@
 			files = (
 				5413D4DA273766800015EA0C /* CoffeeShopView.swift in Sources */,
 				543275662739ADC200B6C1A3 /* HeaderView.swift in Sources */,
+				540B80C027443DBD00414BE6 /* ShopAddressView.swift in Sources */,
+				540B80BE27443CD800414BE6 /* Completed_CoffeeShopView.swift in Sources */,
 				5480B7442736FC8B000CA635 /* ContentView.swift in Sources */,
 				54602062273B08C6009ED64F /* GridView.swift in Sources */,
 				5480B7422736FC8B000CA635 /* FindSomeJoeApp.swift in Sources */,
 				543275642739934700B6C1A3 /* SideBarView.swift in Sources */,
 				5480B7502736FECB000CA635 /* Data.swift in Sources */,
+				540B80C227443DF600414BE6 /* Completed_ShopAddressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
